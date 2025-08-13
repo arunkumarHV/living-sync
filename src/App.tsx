@@ -8,6 +8,11 @@ import LoginPage from "@/components/auth/LoginPage";
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import Dashboard from "@/pages/Dashboard";
 import Students from "@/pages/Students";
+import Rooms from "@/pages/Rooms";
+import Fees from "@/pages/Fees";
+import Requests from "@/pages/Requests";
+import Attendance from "@/pages/Attendance";
+import Assets from "@/pages/Assets";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -56,6 +61,41 @@ const App = () => (
               </ProtectedRoute>
             }>
               <Route index element={<Students />} />
+            </Route>
+            <Route path="/rooms" element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }>
+              <Route index element={<Rooms />} />
+            </Route>
+            <Route path="/fees" element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }>
+              <Route index element={<Fees />} />
+            </Route>
+            <Route path="/requests" element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }>
+              <Route index element={<Requests />} />
+            </Route>
+            <Route path="/attendance" element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }>
+              <Route index element={<Attendance />} />
+            </Route>
+            <Route path="/assets" element={
+              <ProtectedRoute>
+                <DashboardLayout />
+              </ProtectedRoute>
+            }>
+              <Route index element={<Assets />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
